@@ -1,11 +1,11 @@
-apiVersion: cert-manager.io/v1alpha2
-kind: Issuer
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: <your e-mail address>
+    email: <your email>
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
