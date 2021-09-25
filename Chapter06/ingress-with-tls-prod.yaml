@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: simple-frontend-ingress
@@ -7,13 +7,16 @@ metadata:
 spec:
   tls:
   - hosts:
-    - <your dns prefix>.<your azure region>.cloudapp.azure.com
+    - liv-admin.uksouth.cloudapp.azure.com
     secretName: frontend-tls
   rules:
-  - host: <your dns prefix>.<your azure region>.cloudapp.azure.com
+  - host: liv-admin.uksouth.cloudapp.azure.com
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: frontend
-          servicePort: 80
+          service: 
+            name: frontend
+            port:
+              number: 80
