@@ -7,10 +7,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - liv-admin.uksouth.cloudapp.azure.com
+    - <dns-name>.<region>.cloudapp.azure.com
     secretName: frontend-tls
   rules:
-  - host: liv-admin.uksouth.cloudapp.azure.com
+  - host: <dns-name>.<region>.cloudapp.azure.com
     http:
       paths:
       - path: /
