@@ -7,4 +7,8 @@ Hands-On Kubernetes on Azure - Second Edition
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.5.3/cert-manager.yaml
 
 ### Service Catalog chart
-helm repo add svc-cat https://kubernetes-sigs.github.io/service-catalog
+```bash
+$ kubectl create namespace catalog
+$ helm repo add svc-cat https://kubernetes-sigs.github.io/service-catalog
+$ helm install catalog svc-cat/catalog --namespace catalog
+```
