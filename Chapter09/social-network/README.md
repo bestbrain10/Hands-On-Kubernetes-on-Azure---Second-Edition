@@ -295,7 +295,7 @@ cd event-sourcing-microservices-example
 Add the bitnami helm repository which contains the `kafka` and `zookeeper` charts:
 
 ```bash
-helm repo add bitnami https://charts.bitnami.com
+helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com
 ```
 
